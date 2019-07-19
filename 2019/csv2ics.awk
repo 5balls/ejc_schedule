@@ -31,7 +31,7 @@ DTSTAMP:%sZ\n\
 UID:%sZ-EJC2019-%03d\n\
 DTSTART;TZID=Europe/London:%s\n\
 DTEND;TZID=Europe/London:%s\n\
-SUMMARY:%s\n",strftime("%Y%d%mT%H%M%S",systime()),strftime("%Y%d%mT%H%M%S",systime()),NR,strftime("%Y%d%mT%H%M%S",mktime($1)),strftime("%Y%d%mT%H%M%S",mktime($1)+60*60),$2;
+SUMMARY:%s\n",strftime("%Y%m%dT%H%M%S",systime()),strftime("%Y%m%dT%H%M%S",systime()),NR,strftime("%Y%m%dT%H%M%S",mktime($1)),strftime("%Y%m%dT%H%M%S",mktime($1)+60*60),$2;
 if($4!="") printf "URL:%s\n", $4;
 printf "DESCRIPTION:%s\n",$3;
 if($5!="") printf "LOCATION:%f, %f\n",$5,$6;
