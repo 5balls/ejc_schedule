@@ -32,8 +32,11 @@ UID:%sZ-EJC2019-%03d\n\
 DTSTART;TZID=Europe/London:%s\n\
 DTEND;TZID=Europe/London:%s\n\
 SUMMARY:%s\n",strftime("%Y%m%dT%H%M%S",systime()),strftime("%Y%m%dT%H%M%S",systime()),NR,strftime("%Y%m%dT%H%M%S",mktime($1)),strftime("%Y%m%dT%H%M%S",mktime($1)+60*60),$2;
-if($4!="") printf "URL:%s\n", $4;
+if($4!=""){ printf "URL:%s\n\
+DESCRIPTION:%s\\n%s\n", $4,$3,$4;
+}else{
 printf "DESCRIPTION:%s\n",$3;
+}
 if($5!="") printf "LOCATION:%f, %f\n",$5,$6;
 if($5!="") printf "GEO:%f;%f\n",$5,$6;
 print "END:VEVENT";
