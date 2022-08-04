@@ -9,7 +9,7 @@
 
 <xsl:template match="div[@class='elementor-text-editor elementor-clearfix']/p">
 <xsl:if test="contains(preceding::h2[1],'August')">
-<xsl:value-of select="preceding::h2[1]"/>| <xsl:value-of select="."/><xsl:text>&#xa;</xsl:text>
+<xsl:value-of select="preceding::h2[1]"/> | <xsl:value-of select="."/><xsl:text>&#xa;</xsl:text>
 </xsl:if>
 </xsl:template>
 
