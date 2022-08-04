@@ -2,9 +2,9 @@
 awk -F"," -f - "$@" << 'EOF'
 #!/usr/bin/awk -f
 BEGIN{ print "BEGIN:VCALENDAR\n\
-PRODID:EJC2019SCHEDULESCRIPT\n\
+PRODID:EJC2022SCHEDULESCRIPT\n\
 VERSION:2.0\n\
-X-WR-CALNAME:EJC2019SCHEDULE\n\
+X-WR-CALNAME:EJC2022SCHEDULE\n\
 CALSCALE:GREGORIAN\n\
 BEGIN:VTIMEZONE\n\
 TZID:Europe/London\n\
@@ -28,7 +28,7 @@ END:VTIMEZONE";
 {
 printf "BEGIN:VEVENT\n\
 DTSTAMP:%sZ\n\
-UID:%sZ-EJC2019-%03d\n\
+UID:%sZ-EJC2022-%03d\n\
 DTSTART;TZID=Europe/London:%s\n\
 DTEND;TZID=Europe/London:%s\n\
 SUMMARY:%s\n",strftime("%Y%m%dT%H%M%S",systime()),strftime("%Y%m%dT%H%M%S",systime()),NR,strftime("%Y%m%dT%H%M%S",mktime($1)),strftime("%Y%m%dT%H%M%S",mktime($1)+60*60),$2;
