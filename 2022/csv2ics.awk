@@ -29,9 +29,9 @@ END:VTIMEZONE";
 printf "BEGIN:VEVENT\n\
 DTSTAMP:%sZ\n\
 UID:%sZ-EJC2022-%03d\n\
-DTSTART;TZID=Europe/London:%s\n\
-DTEND;TZID=Europe/London:%s\n\
-SUMMARY:%s\n",strftime("%Y%m%dT%H%M%S",systime()),strftime("%Y%m%dT%H%M%S",systime()),NR,strftime("%Y%m%dT%H%M%S",mktime($1)),strftime("%Y%m%dT%H%M%S",mktime($1)+60*60),$2;
+DTSTART;TZID=Europe/Berlin:%s\n\
+DTEND;TZID=Europe/Berlin:%s\n\
+SUMMARY:%s\n",strftime("%Y%m%dT%H%M%S",systime()),strftime("%Y%m%dT%H%M%S",systime()),NR,strftime("%Y%m%dT%H%M%S",mktime($1)),strftime("%Y%m%dT%H%M%S",mktime($1)),$2;
 if($4!=""){ printf "URL:%s\n\
 DESCRIPTION:%s\\n%s\n", $4,$3,$4;
 }else{
